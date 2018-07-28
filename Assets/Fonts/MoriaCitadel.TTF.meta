@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 1a8434c83593b8f48b370fb1732b2ba8
+timeCreated: 1532540174
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Moria Citadel
+  fontNames:
+  - Moria Citadel
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
