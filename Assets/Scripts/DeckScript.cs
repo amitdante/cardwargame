@@ -33,7 +33,13 @@ public class DeckScript : MonoBehaviour
 		if (player == 1) {
 			GameObject card = Instantiate (yourCard, this.transform);
 			card.GetComponent <MovementHandler> ().target = moveTarget1;
-			gm.yourCardsLeft--;
+			if (gm.yourCardsLeft > 0) {
+				gm.yourCardsLeft--;
+			} else {
+				gm.looseScreen.SetActive (true);
+				gm.canPlay = false;
+			}
+
 			gm.yourCards.Add (card);
 			gm.DrawCard ();
 		}
@@ -43,7 +49,13 @@ public class DeckScript : MonoBehaviour
 	{
 		GameObject card = Instantiate (opponentCard, this.transform);
 		card.GetComponent <MovementHandler> ().target = moveTarget2;
-		gm.opponentCardsLeft--;
+		if (gm.opponentCardsLeft > 0) {
+			gm.opponentCardsLeft--;
+		} else {
+			gm.winScreen.SetActive (true);
+			gm.canPlay = false;
+		}
+	
 		gm.opponentCards.Add (card);
 	}
 

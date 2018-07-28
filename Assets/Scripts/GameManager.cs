@@ -22,8 +22,10 @@ public class GameManager : MonoBehaviour
 	public Text textOpponentCardsLeft;
 	public Text result;
 	public bool warTime = false;
+	public bool canPlay = true;
 	public int yourCardsLeft = 23;
 	public int opponentCardsLeft = 23;
+
 
 	//public GameObject yourCard;
 	//public GameObject opponentCard;
@@ -87,8 +89,10 @@ public class GameManager : MonoBehaviour
 
 	void DrawCardAll ()
 	{
-		yourDeck.GetComponent <DeckScript> ().SimulateAll ();
-		opponentDeck.GetComponent <DeckScript> ().SimulateAll ();
+		if (canPlay) {
+			yourDeck.GetComponent <DeckScript> ().SimulateAll ();
+			opponentDeck.GetComponent <DeckScript> ().SimulateAll ();
+		}
 	}
 
 	public void Battle ()
