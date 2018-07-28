@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerText: {fileID: 114212190857064914}
   power: 0
-  random: 0
+  random: 1
 --- !u!114 &114562580760602540
 MonoBehaviour:
   m_ObjectHideFlags: 1

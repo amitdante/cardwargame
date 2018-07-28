@@ -193,7 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerText: {fileID: 114215072794372544}
   power: 0
-  random: 0
+  random: 1
 --- !u!222 &222161268863066664
 CanvasRenderer:
   m_ObjectHideFlags: 1
