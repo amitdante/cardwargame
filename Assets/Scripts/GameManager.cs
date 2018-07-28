@@ -22,13 +22,14 @@ public class GameManager : MonoBehaviour
 	public Text textOpponentCardsLeft;
 	public Text result;
 	public bool warTime = false;
+	public int yourCardsLeft = 23;
+	public int opponentCardsLeft = 23;
 
 	//public GameObject yourCard;
 	//public GameObject opponentCard;
 	bool winner;
 	AIScript ai;
-	int yourCardsLeft = 23;
-	int opponentCardsLeft = 23;
+
 
 	void Start ()
 	{
@@ -92,8 +93,7 @@ public class GameManager : MonoBehaviour
 
 	public void Battle ()
 	{
-		yourCardsLeft--;
-		opponentCardsLeft--;
+		
 		if (yourCards [yourCards.Count - 1].GetComponent <SetData> ().power > opponentCards [opponentCards.Count - 1].GetComponent <SetData> ().power) {
 			YouWinBattle ();
 		} else if (yourCards [yourCards.Count - 1].GetComponent <SetData> ().power < opponentCards [opponentCards.Count - 1].GetComponent <SetData> ().power) {

@@ -33,6 +33,7 @@ public class DeckScript : MonoBehaviour
 		if (player == 1) {
 			GameObject card = Instantiate (yourCard, this.transform);
 			card.GetComponent <MovementHandler> ().target = moveTarget1;
+			gm.yourCardsLeft--;
 			gm.yourCards.Add (card);
 			gm.DrawCard ();
 		}
@@ -42,6 +43,7 @@ public class DeckScript : MonoBehaviour
 	{
 		GameObject card = Instantiate (opponentCard, this.transform);
 		card.GetComponent <MovementHandler> ().target = moveTarget2;
+		gm.opponentCardsLeft--;
 		gm.opponentCards.Add (card);
 	}
 

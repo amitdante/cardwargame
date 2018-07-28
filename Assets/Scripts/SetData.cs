@@ -12,7 +12,7 @@ public class SetData : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		power = 3;
+		power = 6;
 		if (random)
 			power = UnityEngine.Random.Range (1, 11);
 		
