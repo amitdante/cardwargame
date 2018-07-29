@@ -728,6 +728,7 @@ GameObject:
   m_Component:
   - component: {fileID: 780423892}
   - component: {fileID: 780423893}
+  - component: {fileID: 780423894}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -772,8 +773,20 @@ MonoBehaviour:
   textOpponentCardsLeft: {fileID: 1417534516}
   result: {fileID: 1675094931}
   warTime: 0
-  yourCardsLeft: 23
-  opponentCardsLeft: 23
+  canPlay: 1
+  yourCardsLeft: 26
+  opponentCardsLeft: 26
+--- !u!114 &780423894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 780423891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fbac8fc7cb8f0b46b4cb917c0c8f3fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &878972756
 GameObject:
   m_ObjectHideFlags: 0
@@ -1516,7 +1529,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'CARDS LEFT :
 
-    23'
+    26'
 --- !u!222 &1417534517
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1924,7 +1937,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'CARDS LEFT :
 
-    23'
+    26'
 --- !u!222 &1658728555
 CanvasRenderer:
   m_ObjectHideFlags: 0

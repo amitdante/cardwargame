@@ -39,7 +39,8 @@ public class MovementHandler : MonoBehaviour
 
 	void SwitchAnimation ()
 	{
-		front.SetActive (true);
+		if (!gm.warTime)
+			front.SetActive (true);
 		iTween.RotateTo (this.gameObject, iTween.Hash ("rotation", new Vector3 (0, 180, 0), "time", 0.5f, "easetype", iTween.EaseType.linear));
 	}
 

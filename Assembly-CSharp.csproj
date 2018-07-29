@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MenuHandler.cs" />
      <Compile Include="Assets\Scripts\MovementHandler.cs" />
+     <Compile Include="Assets\Scripts\PopulateCards.cs" />
      <Compile Include="Assets\Scripts\SetData.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

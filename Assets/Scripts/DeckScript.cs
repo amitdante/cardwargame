@@ -10,11 +10,15 @@ public class DeckScript : MonoBehaviour
 	public GameObject opponentCard;
 	public Transform moveTarget1;
 	public Transform moveTarget2;
+	public List<CardData> temp1;
+	public List<CardData> temp2;
 
 	GameManager gm;
 	// Use this for initialization
 	void Start ()
 	{
+		temp1 = new List<CardData> ();
+		temp2 = new List<CardData> ();
 		gm = FindObjectOfType<GameManager> ();
 		if (player == 1)
 			this.GetComponent<Button> ().onClick.AddListener (ClickHandler);
@@ -33,8 +37,11 @@ public class DeckScript : MonoBehaviour
 		if (player == 1) {
 			GameObject card = Instantiate (yourCard, this.transform);
 			card.GetComponent <MovementHandler> ().target = moveTarget1;
+			card.GetComponent <SetData> ().SetValue (gm.player1Cards [0].value);
 			if (gm.yourCardsLeft > 0) {
 				gm.yourCardsLeft--;
+				temp1.Add (gm.player1Cards [0]);
+				gm.player1Cards.RemoveAt (0);
 			} else {
 				gm.looseScreen.SetActive (true);
 				gm.canPlay = false;
@@ -49,7 +56,10 @@ public class DeckScript : MonoBehaviour
 	{
 		GameObject card = Instantiate (opponentCard, this.transform);
 		card.GetComponent <MovementHandler> ().target = moveTarget2;
+		card.GetComponent <SetData> ().SetValue (gm.player2Cards [0].value);
 		if (gm.opponentCardsLeft > 0) {
+			temp2.Add (gm.player2Cards [0]);
+			gm.player2Cards.RemoveAt (0);
 			gm.opponentCardsLeft--;
 		} else {
 			gm.winScreen.SetActive (true);
@@ -69,4 +79,5 @@ public class DeckScript : MonoBehaviour
 		ClickHandler ();
 
 	}
+
 }

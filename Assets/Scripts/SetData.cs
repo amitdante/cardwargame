@@ -12,17 +12,29 @@ public class SetData : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-		power = 10;
+		/*power = 10;
 		if (random)
 			power = UnityEngine.Random.Range (1, 11);
 		
-		powerText.text = power.ToString ();
+		powerText.text = power.ToString ();*/
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
 		
+	}
+
+	public void SetValue (int val)
+	{
+		if (!random) {
+			this.power = val;
+			powerText.text = power.ToString ();
+		} else {
+			power = 8;
+
+			powerText.text = power.ToString ();
+		}
 	}
 
 }

@@ -150,3 +150,4 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp-firstpass.dll:.RotateSample
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 3f1ce793906e3df27f4db65cac4d2493 Assembly-CSharp.dll:.GameManager
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.PopulateCards
